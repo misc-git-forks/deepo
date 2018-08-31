@@ -28,7 +28,7 @@ class Caffe2(Module):
                 && \
 
             $GIT_CLONE https://github.com/pytorch/pytorch.git \
-                ~/caffe2 --recurse-submodules -j8 && \
+                ~/caffe2 --recurse-submodules && \
             cd ~/caffe2 && \
 
             sed -i "s/prefix=''/prefix='', standard_lib=True) \
