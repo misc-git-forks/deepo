@@ -28,9 +28,8 @@ class Caffe2(Module):
                 && \
 
             $GIT_CLONE https://github.com/pytorch/pytorch.git \
-                ~/caffe2 --recursive && \
+                ~/caffe2 --recurse-submodules -j8 && \
             cd ~/caffe2 && \
-            git submodule update --init && \
 
             sed -i "s/prefix=''/prefix='', standard_lib=True) \
                 + '\/dist-packages'/g" CMakeLists.txt && \
